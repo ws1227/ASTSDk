@@ -113,12 +113,20 @@
 ---
 ###直播间确认充值按钮的点击事件的代理方法
 - 使用方法初始化SDK时候需要遵守代理ASTSDKDelegate
+ 
+ 
+```
+[ASTSDK sharedSDK].delegate=self;
+```
+
+
 - charge是一个字典类型返回当前选中的充值额度的数据
  
 
 ```
 -(void)userRecharge:(_Nonnull id)charge;
 ```
+
 
     
 
