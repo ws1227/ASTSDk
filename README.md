@@ -126,6 +126,12 @@
 ```
 -(void)userRecharge:(_Nonnull id)charge;
 ```
+---
+### 退出登录代理回调
+
+```
+-(void)exitSDK;
+```
 
 
     
