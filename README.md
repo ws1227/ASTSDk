@@ -1,14 +1,11 @@
 
 #AST SDK 使用指南
 
-
- <font color=#40E0D0 size=5> •	SDK 概述</font>
-
+ •	SDK 概述
 
 全聚星SDK（AST SDK）为iOS移动应用提供完善的视屏直播开发框架，方便第三方应用快速集成全聚星视频直播功能。SDK兼容iOS 8.0+，Demo兼容iOS 8.0+。
 
-
- <font color=#40E0D0 size=5> •	开发准备</font>
+•	开发准备
 
 AST SDK  通过提供静态库的方式集成到项目中，只需要手动将StarLiveLib.framework和ASTImages.bundle拖入到项目中，然后需要设置Enable Bitcode 为NO，添加libstdc.tbd库 ，最后通过CocoaPods 的podfile文件添加相应的依赖库（注1）即可使用。
 
@@ -20,9 +17,8 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
 
 ---
 
-
-  <font color=#40E0D0 size=5> • 初始化 SDK</font>
-
+### 初始化 SDK
+ 
 在需要使用 SDK 的地方导入头文件'StarLiveLib/ASTSDK.h'
  
 添加 SDK 初始化方法。
@@ -48,8 +44,7 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
 ---
 
  
-
-  <font color=#40E0D0 size=5> • 登录SDK </font>一般是放在用户登录成功后调用
+####登录SDK 一般是放在用户登录成功后调用
 
 ```
 [[ASTSDK sharedSDK]UserLogin:@"用户ID" nickName:@"昵称" avatar:@"头像地址链接"completion:^(NSString * _Nonnull message, NSInteger code) {
@@ -66,17 +61,14 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
 
 ---
 
-
- <font color=#40E0D0 size=5> • 当前登录状态 </font>
+###  当前登录状态
 ```
 -(BOOL)isLogined;
 ```
 
 
 
----
-<font color=#40E0D0 size=5> • 修改头像</font>
-### 
+### 修改头像
 
  
 ```
@@ -86,9 +78,9 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
     }];
 ```
 
-<font color=#40E0D0 size=5> • 修改昵称</font>
-### 
+---
 
+###修改昵称
    
 ```
 [[ASTSDK sharedSDK]UserModiNickName:@"nickname" completion:^(NSString * _Nonnull message, NSInteger code) {
@@ -98,9 +90,7 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
     }];
 ```
 
-
-<font color=#40E0D0 size=5> • 返回充值列表的数据</font>
-### 
+###返回充值列表的数据
 ###### 返回的数据说明
 - iosStrength表示充值可以获取的体力
 - priceStr表示支付价格(元)
@@ -119,10 +109,9 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
     }];
 ```
 
+---
 
-<font color=#40E0D0 size=5> • 账户充值</font>
-### 
-
+###账户充值
 -  rechargeId是从充值列表的数据中获取
 -  transId是交易流水号 必须大于13位
 
@@ -134,10 +123,8 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
         }];
 ```
 
-
-<font color=#40E0D0 size=5> • 直播间确认充值按钮的点击事件的代理方法</font>
-### 
-
+---
+###直播间确认充值按钮的点击事件的代理方法
 - 使用方法初始化SDK时候需要遵守代理ASTSDKDelegate
  
  
@@ -153,10 +140,8 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
 -(void)userRecharge:(_Nonnull id)charge;
 ```
 
-
-<font color=#40E0D0 size=5> • 退出登录代理回调</font>
-### 
-
+---
+### 退出登录代理回调
 
 ```
 -(void)exitSDK;
