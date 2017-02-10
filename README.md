@@ -1,6 +1,18 @@
 
-#ASTSDK使用说明
- 
+#AST SDK 使用指南
+
+ •	SDK 概述
+
+全聚星SDK（AST SDK）为iOS移动应用提供完善的视屏直播开发框架，方便第三方应用快速集成全聚星视频直播功能。SDK兼容iOS 8.0+，Demo兼容iOS 8.0+。
+
+•	开发准备
+
+AST SDK  通过提供静态库的方式集成到项目中，只需要手动将StarLiveLib.framework和ASTImages.bundle拖入到项目中，然后需要设置Enable Bitcode 为NO，添加libstdc.tbd库 ，最后通过CocoaPods 的podfile文件添加相应的依赖库（注1）即可使用。
+
+注1 ：开发者应根据自身项目，将不冲突的依赖库添加进工程。
+
+
+
 
 
 ---
