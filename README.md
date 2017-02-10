@@ -1,8 +1,7 @@
 
 #ASTSDK使用说明
  
-###官网注册一个账号获取到appkey和appsocks。
- 
+
 
 ---
 
@@ -17,7 +16,8 @@
 ```
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-   [[ASTSDK sharedSDK]registerWithAppID:@"qjx8E9lQ9gBFb6KfRLnT" appsocks:@"d3bac287037a3b2441e913517beba523" cerName:@""];
+**  appKey和appsocks联系客服提供，cerName推送证书名称
+   [[ASTSDK sharedSDK]registerWithAppID:@"appKey" appsocks:@"appsocks" cerName:@"cerName"];
 
  
   }
