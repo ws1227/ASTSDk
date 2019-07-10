@@ -139,6 +139,12 @@ AST SDK  通过提供静态库的方式集成到项目中，只需要手动将S
 ```
 -(void)userRecharge:(_Nonnull id)charge;
 ```
+---
+### 退出登录代理回调
+
+```
+-(void)exitSDK;
+```
 
 ---
 ### 退出登录代理回调
